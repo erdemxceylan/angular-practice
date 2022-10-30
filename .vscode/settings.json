@@ -1,5 +1,7 @@
 {
   "files.exclude": {
     "**/*.spec.ts": true
-  }
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "double"
 }

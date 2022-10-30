@@ -1,10 +1,26 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-practice';
+
+   // String Interpolation
+   title = 'Angular Practice';
+   name: string = 'Erdem';
+   age: number = 27;
+
+   // Property Binding
+   paragraph: string = 'I am a paragraph';
+
+   // Event Binding
+   onUpdateName(event: Event) {
+      this.name = (<HTMLInputElement>event.target).value;
+   }
+
+   onUpdateAge(event: Event) {
+      this.age = Number((<HTMLInputElement>event.target).value);
+   }
 }
