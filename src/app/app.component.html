@@ -3,9 +3,6 @@
   <h3>{{ title }}</h3>
   <h6>My name is {{ name }} and I am {{ age }} years old</h6>
 
-  <!-- Property Binding -->
-  <p [innerText]="paragraph"></p>
-
   <!-- Event Binding -->
   <form>
     <input (input)="onUpdateName($event)" />
@@ -16,4 +13,15 @@
   <form>
     <input [(ngModel)]="title" name="title" />
   </form>
+
+  <button class="btn btn-primary" (click)="onDetailsClicked()">Details</button>
+
+  <div *ngIf="showDetails; else noDetails">
+    <p [innerText]="paragraph"></p>
+    <p>Details about me</p>
+  </div>
+
+  <ng-template #noDetails>
+    <p>Click the button above to show details</p>
+  </ng-template>
 </div>

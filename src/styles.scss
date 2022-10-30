@@ -5,4 +5,9 @@ body {
   align-items: center;
   height: 100vh;
   background-color: aliceblue;
+
+  * {
+    margin: 0.25rem;
+    padding: 0.25rem;
+  }
 }

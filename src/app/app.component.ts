@@ -11,6 +11,7 @@ export class AppComponent {
    title = 'Angular Practice';
    name: string = 'Erdem';
    age: number = 27;
+   showDetails: boolean = false;
 
    // Property Binding
    paragraph: string = 'I am a paragraph';
@@ -22,5 +23,9 @@ export class AppComponent {
 
    onUpdateAge(event: Event) {
       this.age = Number((<HTMLInputElement>event.target).value);
+   }
+
+   onDetailsClicked() {
+      this.showDetails = !this.showDetails;
    }
 }
