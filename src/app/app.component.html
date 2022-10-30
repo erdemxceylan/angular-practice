@@ -1,27 +1,8 @@
-<div class="container">
-  <!-- String Interpolation -->
-  <h3>{{ title }}</h3>
-  <h6>My name is {{ name }} and I am {{ age }} years old</h6>
-
-  <!-- Event Binding -->
-  <form>
-    <input (input)="onUpdateName($event)" />
-    <input (input)="onUpdateAge($event)" />
-  </form>
-
-  <!-- Two-way Binding -->
-  <form>
-    <input [(ngModel)]="title" name="title" />
-  </form>
-
-  <button class="btn btn-primary" (click)="onDetailsClicked()">Details</button>
-
-  <div *ngIf="showDetails; else noDetails">
-    <p [innerText]="paragraph"></p>
-    <p>Details about me</p>
-  </div>
-
-  <ng-template #noDetails>
-    <p>Click the button above to show details</p>
-  </ng-template>
-</div>
+<h3>{{ title }}</h3>
+<form>
+  <input [(ngModel)]="title" name="title" />
+</form>
+<!-- <app-intro></app-intro> -->
+<p *ngFor="let month of ['Jan', 'Feb', 'March', 'April']; index as i">
+  {{ i + 1 }}) {{ month }}
+</p>

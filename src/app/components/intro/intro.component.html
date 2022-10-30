@@ -1,0 +1,19 @@
+<h6>My name is {{ name }} and I am {{ age }} years old</h6>
+
+<form>
+  <input (input)="onUpdateName($event)" />
+  <input (input)="onUpdateAge($event)" />
+</form>
+
+<button class="btn btn-primary" (click)="showDetails = !showDetails">
+  Details
+</button>
+
+<div *ngIf="showDetails; else noDetails">
+  <p [innerText]="paragraph"></p>
+  <p>Details about me</p>
+</div>
+
+<ng-template #noDetails>
+  <p>Click the button above to show details</p>
+</ng-template>
